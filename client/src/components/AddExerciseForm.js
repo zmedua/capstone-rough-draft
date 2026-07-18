@@ -72,14 +72,14 @@ function AddExerciseForm({
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="exercise-form" onSubmit={handleSubmit}>
       <h4>Add Exercise</h4>
 
-      <label htmlFor={`exercise-${workoutId}`}>
+      <label className="form-label" htmlFor={`exercise-${workoutId}`}>
         Exercise
       </label>
 
-      <select
+      <select className="exercise-select"
         id={`exercise-${workoutId}`}
         value={exerciseId}
         onChange={(event) =>
@@ -98,8 +98,8 @@ function AddExerciseForm({
 
       {exerciseId && isCardio ? (
         <>
-          <label htmlFor={`duration-${workoutId}`}>
-            Duration in seconds
+          <label className="form-label" htmlFor={`duration-${workoutId}`}>
+            Duration in minutes
           </label>
 
           <input
@@ -115,7 +115,7 @@ function AddExerciseForm({
         </>
       ) : exerciseId ? (
         <>
-          <label htmlFor={`sets-${workoutId}`}>
+          <label className="form-label" htmlFor={`sets-${workoutId}`}>
             Sets
           </label>
 
@@ -130,7 +130,7 @@ function AddExerciseForm({
             required
           />
 
-          <label htmlFor={`reps-${workoutId}`}>
+          <label className="form-label" htmlFor={`reps-${workoutId}`}>
             Reps
           </label>
 
@@ -147,14 +147,14 @@ function AddExerciseForm({
         </>
       ) : null}
 
-      <button
+      <button className="form-button"
         type="submit"
         disabled={isLoading || !exerciseId}
       >
         {isLoading ? "Adding..." : "Add Exercise"}
       </button>
 
-      {error && <p>{error}</p>}
+      {error && <p className="form-error">{error}</p>}
     </form>
   );
 }

@@ -39,7 +39,7 @@ function LoginForm({ onLogin }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div>
+      <div className="form-group">
         <label htmlFor="username">Username</label>
         <input
           type="text"
@@ -50,7 +50,7 @@ function LoginForm({ onLogin }) {
         />
       </div>
 
-      <div>
+      <div className="form-group">
         <label htmlFor="password">Password</label>
         <input
           type="password"
@@ -62,12 +62,12 @@ function LoginForm({ onLogin }) {
       </div>
 
       <div>
-        <button type="submit" disabled={isLoading}>
+        <button className="login-button" type="submit" disabled={isLoading}>
           {isLoading ? "Loading..." : "Login"}
         </button>
       </div>
 
-      <div>
+      <div className="error-message">
         {errors.map((error, index) => (
           <p key={`${error}-${index}`}>{error}</p>
         ))}

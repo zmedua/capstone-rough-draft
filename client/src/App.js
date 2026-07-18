@@ -11,7 +11,7 @@ import Login from "./pages/Login";
 import WorkoutsPage from "./pages/WorkoutsPage";
 import AddWorkoutPage from "./pages/AddWorkoutPage";
 import Signup from "./pages/Signup"
-
+import "./App.css";
 function App() {
   const [user, setUser] = useState(null);
   const [workouts, setWorkouts] = useState([]);

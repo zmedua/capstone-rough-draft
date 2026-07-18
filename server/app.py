@@ -235,6 +235,12 @@ def delete_workout_exercise(id):
 @app.route("/signup", methods=["POST"])
 def signup():
     data = request.get_json()
+    username = data.get("username")
+    password = data.get("password")
+
+    existing_user = User.query.filter_by(username=username).first()
+    if existing_user:
+        return make_response({"errors": ["Username already exists"]}, 409)
     try:
         user = User(username=data.get("username"))
         user.password_hash = data.get("password")
@@ -251,7 +257,7 @@ def signup():
 
     except Exception as e:
         db.session.rollback()
-        return make_response({"errors": [str(e)]}, 422)
+        return make_response({"errors": [" error occured"]}, 400)
 @app.route("/login", methods=["POST"])
 def login():
     data = request.get_json()

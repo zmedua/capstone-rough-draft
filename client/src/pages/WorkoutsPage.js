@@ -1,6 +1,6 @@
 import React from "react";
 import WorkoutCard from "../components/WorkoutCard";
-
+import "../styles/WorkoutsPage.css";
 function WorkoutsPage({
   workouts,
   setWorkouts,

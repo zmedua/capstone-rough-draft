@@ -1,0 +1,53 @@
+.form-label {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+    display: block;
+}
+.form-notes {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+    display: block;
+}
+.form-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.form-button:hover {
+    background-color: #0056b3;
+}
+.form-error {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+.workout-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+.workout-form input,
+.workout-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.workout-form textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}

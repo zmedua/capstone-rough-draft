@@ -1,12 +1,12 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
-
+import "../styles/NavBar.css";
 function NavBar({ user, onLogout }) 
 {
   return (
-    <nav>
-      <h1>Workout Tracker</h1>
-      <p>Welcome, {user.username}</p>
+    <nav className="navbar">
+      <h1 className="navbar-title">Workout Tracker</h1>
+      <p className="navbar-welcome">Welcome, {user.username}</p>
 
       <NavLink to="/workouts">
         Workouts
@@ -20,7 +20,7 @@ function NavBar({ user, onLogout })
 
       {"|"}
 
-      <button type="button" onClick={onLogout}>
+      <button className="nav-button" type="button" onClick={onLogout}>
         Logout
       </button>
     </nav>

@@ -1,0 +1,30 @@
+.navbar {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-title {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.navbar-welcome {
+    margin: 0;
+    font-size: 1rem;
+    color: #666;
+}
+
+.nav-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    background-color: #0056b3;
+}

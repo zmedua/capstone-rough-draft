@@ -1,0 +1,91 @@
+.workout-card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+.workout-card h2 {
+  margin-top: 0;
+}
+   
+.remove-exercise-button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.remove-exercise-button:hover {
+  background-color: #e60000;
+}
+.delete-workout-button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 16px;
+}
+.delete-workout-button:hover {
+  background-color: #e60000;
+}
+.exercise-form {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #ccc;
+}
+.exercise-form label {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.exercise-form input,
+.exercise-form select {
+  width:100%;
+  box-sizing: border-box;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.exercise-select{
+    background-color: white;
+}
+.exercise-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 8px;
+  padding: 8px 12px;
+} 
+.exercise-form button:hover {
+  background-color: #0056b3;
+}
+.form-error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+.exercise-form h4 {
+  margin-bottom: 12px;
+}
+.exercise-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 4px;
+}  
+.exercise-form button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+} 
+
+.exercise-form button,
+.remove-exercise-button,
+.delete-workout-button {
+    transition: background-color 0.2s ease-in-out;
+}

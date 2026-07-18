@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import WorkoutForm from "../components/WorkoutForm";
+import "../styles/AddWorkoutPage.css";
 
 function AddWorkoutPage({ onAddWorkout }) {
   const navigate = useNavigate();

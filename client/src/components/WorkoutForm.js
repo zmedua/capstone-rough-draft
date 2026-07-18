@@ -52,10 +52,10 @@ function WorkoutForm({ onAddWorkout }) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="workout-form" onSubmit={handleSubmit}>
       <h2>Add Workout</h2>
 
-      <label htmlFor="workout-date">Date</label>
+      <label className="form-label" htmlFor="workout-date">Date</label>
       <input
         id="workout-date"
         type="date"
@@ -64,7 +64,7 @@ function WorkoutForm({ onAddWorkout }) {
         required
       />
 
-      <label htmlFor="duration">Duration in minutes</label>
+      <label className="form-label" htmlFor="duration">Duration in minutes</label>
       <input
         id="duration"
         type="number"
@@ -76,19 +76,19 @@ function WorkoutForm({ onAddWorkout }) {
         required
       />
 
-      <label htmlFor="notes">Notes</label>
+      <label className="form-notes" htmlFor="notes">Notes</label>
       <textarea
         id="notes"
         value={notes}
         onChange={(event) => setNotes(event.target.value)}
       />
 
-      <button type="submit" disabled={isLoading}>
+      <button className="form-button" type="submit" disabled={isLoading}>
         {isLoading ? "Adding..." : "Add Workout"}
       </button>
 
       {errors.map((error, index) => (
-        <p key={`${error}-${index}`}>{error}</p>
+        <p className="form-error" key={`${error}-${index}`}>{error}</p>
       ))}
     </form>
   );

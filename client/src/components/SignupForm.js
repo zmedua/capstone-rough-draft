@@ -54,7 +54,7 @@ function SignupForm({ onSignup }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div>
+      <div className="form-group">
         <label htmlFor="signup-username">
           Username
         </label>
@@ -69,7 +69,7 @@ function SignupForm({ onSignup }) {
         />
       </div>
 
-      <div>
+      <div className="form-group">
         <label htmlFor="signup-password">
           Password
         </label>
@@ -84,7 +84,7 @@ function SignupForm({ onSignup }) {
         />
       </div>
 
-      <div>
+      <div className="form-group">
         <label htmlFor="password-confirmation">
           Confirm Password
         </label>
@@ -101,13 +101,13 @@ function SignupForm({ onSignup }) {
         />
       </div>
 
-      <div>
-        <button type="submit" disabled={isLoading}>
+      <div className="form-group">
+        <button className="signup-button" type="submit" disabled={isLoading}>
           {isLoading ? "Creating account..." : "Sign Up"}
         </button>
       </div>
 
-      <div>
+      <div className="error-message">
         {errors.map((error, index) => (
           <p key={`${error}-${index}`}>{error}</p>
         ))}

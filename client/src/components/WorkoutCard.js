@@ -82,7 +82,7 @@ function WorkoutCard({
   }
 
   return (
-    <article>
+    <article className="workout-card">
       <h2>{workout.date}</h2>
 
       <p>
@@ -113,11 +113,11 @@ function WorkoutCard({
                   : ""}
 
                 {workoutExercise.duration_seconds
-                  ? ` — ${workoutExercise.duration_seconds} seconds`
+                  ? ` — ${workoutExercise.duration_seconds} minutes`
                   : ""}
               </p>
 
-              <button
+              <button className="remove-exercise-button"
                 type="button"
                 onClick={() =>
                   handleDeleteExercise(
@@ -132,13 +132,13 @@ function WorkoutCard({
         })
       )}
 
-      <AddExerciseForm
+      <AddExerciseForm 
         workoutId={workout.id}
         exercises={exercises}
         onExerciseAdded={handleExerciseAdded}
       />
 
-      <button
+      <button className="delete-workout-button"
         type="button"
         onClick={handleDeleteWorkout}
         disabled={isDeleting}
